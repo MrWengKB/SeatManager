@@ -42,7 +42,11 @@
     $('#langSel').title = t('language');
     [['#btnNew', 'newPlan'], ['#btnOpen', 'open'], ['#btnSave', 'save'], ['#btnPrint', 'print']].forEach(([s, k]) => { $(s + ' span').textContent = t(k); $(s).title = t(k); });
     $('#btnZip span').textContent = t('offlineZip');
-    $('#btnZip').title = t('offlineTip');
+    $('#offlineTitle').textContent = t('offlineTitle');
+    $('#offlineMsg').textContent = t('offlineMsg');
+    $('#offlineSteps').innerHTML = ['offlineStep1', 'offlineStep2', 'offlineStep3'].map(k => `<li>${esc(t(k))}</li>`).join('') + `<li class="note">${esc(t('offlineNote'))}</li>`;
+    $('#offlineDownload span').textContent = t('offlineDownload');
+    $('#offlineClose').textContent = t('close');
     $('#btnUndo').title = t('undo'); $('#btnRedo').title = t('redo');
     $('#btnUndo').disabled = !Store.canUndo();
     $('#btnRedo').disabled = !Store.canRedo();
@@ -475,6 +479,13 @@
     } catch (err) { alert(t('fileError')); }
   });
   $('#btnPrint').addEventListener('click', () => window.print());
+  // offline download popup
+  const offlineModal = $('#offlineModal');
+  const closeOffline = () => { offlineModal.hidden = true; };
+  $('#btnZip').addEventListener('click', () => { offlineModal.hidden = false; $('#offlineDownload').focus(); });
+  $('#offlineClose').addEventListener('click', closeOffline);
+  $('#offlineDownload').addEventListener('click', () => setTimeout(closeOffline, 300));
+  offlineModal.addEventListener('click', e => { if (e.target === offlineModal) closeOffline(); });
   $('#zoomIn').addEventListener('click', () => Layout.setZoom(ui.zoom * 1.15));
   $('#zoomOut').addEventListener('click', () => Layout.setZoom(ui.zoom / 1.15));
   $('#zoomFit').addEventListener('click', () => Layout.fit());
@@ -500,6 +511,7 @@
     if (mod && e.key.toLowerCase() === 'z' && !typing) { e.preventDefault(); e.shiftKey ? Store.redo() : Store.undo(); return; }
     if (mod && e.key.toLowerCase() === 'y' && !typing) { e.preventDefault(); Store.redo(); return; }
     if (typing) return;
+    if (e.key === 'Escape' && !offlineModal.hidden) { closeOffline(); return; }
     if (e.key === 'Escape') { ui.sel = new Set(); ui.picked = null; renderAll(); return; }
     if (ui.tab !== 'layout') return;
     if (mod && e.key.toLowerCase() === 'd') { e.preventDefault(); Layout.duplicate(); }

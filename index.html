@@ -35,7 +35,7 @@
         <option value="ms">Bahasa Melayu</option>
         <option value="ta">தமிழ்</option>
       </select>
-      <a id="btnZip" class="zipbtn" href="https://github.com/MrWengKB/SeatManager/archive/refs/heads/main.zip" download>⬇ <span></span></a>
+      <button id="btnZip" class="zipbtn" type="button">⬇ <span></span></button>
       <input type="file" id="openFile" accept=".json,application/json" hidden>
     </div>
   </header>
@@ -65,6 +65,19 @@
       </div>
     </section>
   </main>
+
+  <div id="offlineModal" class="mdo" hidden>
+    <div class="mdc" role="dialog" aria-modal="true" aria-labelledby="offlineTitle">
+      <div class="mdicon" aria-hidden="true">💻</div>
+      <h3 id="offlineTitle"></h3>
+      <p id="offlineMsg"></p>
+      <ol id="offlineSteps"></ol>
+      <div class="mdbtns">
+        <a id="offlineDownload" class="mdbtn primary" href="https://github.com/MrWengKB/SeatManager/archive/refs/heads/main.zip" download>⬇ <span></span></a>
+        <button id="offlineClose" class="mdbtn" type="button"></button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/i18n.js"></script>
   <script src="js/store.js"></script>
