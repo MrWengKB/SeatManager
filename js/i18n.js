@@ -4,6 +4,7 @@
 
   // key: [en, zh, ms, ta]
   const S = {
+    appName: ['Seat Manager', '排排坐', 'Seat Manager', 'Seat Manager'],
     appSub: ['Classroom seating planner', '座位编排小帮手', 'Perancang tempat duduk kelas', 'வகுப்பறை இருக்கை திட்டமிடல்'],
     classNamePh: ['Class name, e.g. 3E2', '班级名称，如：三年级忠班', 'Nama kelas, cth. 3 Bestari', 'வகுப்பின் பெயர், எ.கா. 3E2'],
     language: ['Language', '语言', 'Bahasa', 'மொழி'],
@@ -16,7 +17,7 @@
     offlineTip: ['Download the website files (.zip). Unzip and open index.html to use it on your computer without internet.', '下载网站源文件（.zip）。解压后打开 index.html，就能在电脑上离线使用。', 'Muat turun fail laman web (.zip). Nyahzip dan buka index.html untuk menggunakannya di komputer tanpa internet.', 'இணையதளக் கோப்புகளைப் பதிவிறக்கவும் (.zip). பிரித்தெடுத்து index.html-ஐத் திறந்தால், இணையம் இல்லாமலேயே உங்கள் கணினியில் பயன்படுத்தலாம்.'],
     undo: ['Undo', '撤销', 'Buat asal', 'செயல்தவிர்'],
     redo: ['Redo', '重做', 'Buat semula', 'மீண்டும் செய்'],
-    fileError: ['This is not a valid 排排坐 file.', '这不是有效的排排坐文件。', 'Ini bukan fail 排排坐 yang sah.', 'இது சரியான 排排坐 கோப்பு அல்ல.'],
+    fileError: ['This is not a valid Seat Manager file.', '这不是有效的排排坐文件。', 'Ini bukan fail Seat Manager yang sah.', 'இது சரியான Seat Manager கோப்பு அல்ல.'],
     autosaved: ['Changes are saved automatically in this browser.', '改动会自动保存在本浏览器中。', 'Perubahan disimpan secara automatik dalam pelayar ini.', 'மாற்றங்கள் இந்த உலாவியில் தானாகச் சேமிக்கப்படும்.'],
 
     tabLayout: ['Layout', '布局', 'Susun atur', 'அமைப்பு'],

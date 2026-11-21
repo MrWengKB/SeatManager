@@ -31,7 +31,8 @@
 
   /* ---------- header ---------- */
   function renderHeader() {
-    document.title = '排排坐 · ' + t('appSub');
+    document.title = t('appName') + ' · ' + t('appSub');
+    $('#brandName').textContent = t('appName');
     $('#brandSub').textContent = t('appSub');
     const title = $('#classTitle');
     title.placeholder = t('classNamePh');
@@ -456,7 +457,7 @@
     const d = new Date();
     const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
     a.href = URL.createObjectURL(blob);
-    a.download = `${(st.title || '排排坐').replace(/[\\/:*?"<>|]/g, '_')}-${stamp}.ppz.json`;
+    a.download = `${(st.title || t('appName')).replace(/[\\/:*?"<>|]/g, '_')}-${stamp}.ppz.json`;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });

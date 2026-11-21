@@ -46,7 +46,8 @@ textarea { width: 100%; resize: vertical; }
   border-bottom: 1px solid var(--line); flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand b { font-size: 20px; letter-spacing: 2px; display: block; }
+.brand b { font-size: 20px; display: block; white-space: nowrap; }
+html:lang(zh) .brand b { letter-spacing: 2px; }
 .brand small { color: var(--muted); font-size: 12px; display: block; }
 .logo { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 30px; }
 .logo i { display: block; height: 10px; border-radius: 3px; background: #f4b860; }
