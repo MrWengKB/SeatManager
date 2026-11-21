@@ -52,6 +52,11 @@ textarea { width: 100%; resize: vertical; }
 .logo i { display: block; height: 10px; border-radius: 3px; background: #f4b860; }
 .logo i:nth-child(2) { background: #7cc6d6; } .logo i:nth-child(3) { background: #b39ddb; } .logo i:nth-child(4) { background: #8fd19e; }
 .class-title { flex: 1 1 180px; max-width: 320px; font-weight: 600; }
+.zipbtn {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 34px; padding: 6px 11px; border-radius: 8px;
+  border: 1px dashed #cbbfae; background: #fffaf3; color: var(--ink); text-decoration: none; font-size: 14px; white-space: nowrap;
+}
+.zipbtn:hover { border-color: var(--accent); color: var(--accent); }
 .tools { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
 
 main { flex: 1; display: flex; min-height: 0; }
@@ -192,7 +197,7 @@ body.name-dragging, body.name-dragging * { cursor: grabbing !important; }
   .brand small { display: none; }
   .class-title { order: 3; max-width: none; flex-basis: 100%; min-height: 30px; padding: 3px 8px; }
   .tools { margin-left: 0; gap: 4px; }
-  .tools button, .tools select { min-height: 30px; padding: 3px 7px; font-size: 13px; }
+  .tools button, .tools select, .zipbtn { min-height: 30px; padding: 3px 7px; font-size: 13px; }
   .zoom { right: 8px; bottom: 8px; }
   .zoom button { min-height: 28px; padding: 2px 8px; font-size: 13px; }
 }

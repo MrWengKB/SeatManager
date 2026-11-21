@@ -12,6 +12,8 @@
     open: ['Open', '打开', 'Buka', 'திற'],
     save: ['Save', '保存', 'Simpan', 'சேமி'],
     print: ['Print', '打印', 'Cetak', 'அச்சிடு'],
+    offlineZip: ['Download for offline use', '下载离线版', 'Muat turun versi luar talian', 'ஆஃப்லைன் பதிப்பைப் பதிவிறக்கு'],
+    offlineTip: ['Download the website files (.zip). Unzip and open index.html to use it on your computer without internet.', '下载网站源文件（.zip）。解压后打开 index.html，就能在电脑上离线使用。', 'Muat turun fail laman web (.zip). Nyahzip dan buka index.html untuk menggunakannya di komputer tanpa internet.', 'இணையதளக் கோப்புகளைப் பதிவிறக்கவும் (.zip). பிரித்தெடுத்து index.html-ஐத் திறந்தால், இணையம் இல்லாமலேயே உங்கள் கணினியில் பயன்படுத்தலாம்.'],
     undo: ['Undo', '撤销', 'Buat asal', 'செயல்தவிர்'],
     redo: ['Redo', '重做', 'Buat semula', 'மீண்டும் செய்'],
     fileError: ['This is not a valid 排排坐 file.', '这不是有效的排排坐文件。', 'Ini bukan fail 排排坐 yang sah.', 'இது சரியான 排排坐 கோப்பு அல்ல.'],

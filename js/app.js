@@ -40,6 +40,8 @@
     $('#langSel').value = window.I18n.lang;
     $('#langSel').title = t('language');
     [['#btnNew', 'newPlan'], ['#btnOpen', 'open'], ['#btnSave', 'save'], ['#btnPrint', 'print']].forEach(([s, k]) => { $(s + ' span').textContent = t(k); $(s).title = t(k); });
+    $('#btnZip span').textContent = t('offlineZip');
+    $('#btnZip').title = t('offlineTip');
     $('#btnUndo').title = t('undo'); $('#btnRedo').title = t('redo');
     $('#btnUndo').disabled = !Store.canUndo();
     $('#btnRedo').disabled = !Store.canRedo();

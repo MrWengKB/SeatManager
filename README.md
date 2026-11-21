@@ -10,6 +10,8 @@ A classroom seating planner for teachers. Open `index.html` in a browser (or Git
 4. **Seating**: assign randomly or balance boys and girls (by group and between neighbours). You can add conditions such as *A must not sit next to B* or *A must not be in the same group as B*. Arranging by hand also works: drag a name onto a desk, or click a name and then click a desk. Drag one desk onto another to swap the two students, and drag a name back to the list to take them off their seat.
 5. **Roles**: click a student's name to give them roles. Group leader and class monitor are built in, and you can add, rename or delete your own roles.
 
+To use it offline, click **Download for offline use** (top right) to get the zip, unzip it, and open `index.html`.
+
 Print the plan with **Print**. It fits the classroom onto one landscape page.
 
 SheetJS (`js/vendor/xlsx.full.min.js`, Apache-2.0) is bundled so that Excel import also works offline.
