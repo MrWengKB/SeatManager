@@ -1,1 +1,67 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>排排坐</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='10' width='22' height='16' rx='4' fill='%23f4b860'/%3E%3Crect x='36' y='10' width='22' height='16' rx='4' fill='%237cc6d6'/%3E%3Crect x='6' y='36' width='22' height='16' rx='4' fill='%23b39ddb'/%3E%3Crect x='36' y='36' width='22' height='16' rx='4' fill='%238fd19e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <div><b>排排坐</b><small id="brandSub"></small></div>
+    </div>
+    <input id="classTitle" class="class-title" maxlength="60" autocomplete="off">
+    <div class="tools">
+      <button id="btnUndo" class="icon" aria-label="Undo">↶</button>
+      <button id="btnRedo" class="icon" aria-label="Redo">↷</button>
+      <button id="btnNew"><span></span></button>
+      <button id="btnOpen"><span></span></button>
+      <button id="btnSave"><span></span></button>
+      <button id="btnPrint"><span></span></button>
+      <select id="langSel" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="ta">தமிழ்</option>
+      </select>
+      <input type="file" id="openFile" accept=".json,application/json" hidden>
+    </div>
+  </header>
 
+  <main>
+    <aside class="panel">
+      <nav class="tabs">
+        <button class="tab" data-tab="layout"><b>1</b><span></span></button>
+        <button class="tab" data-tab="roster"><b>2</b><span></span></button>
+        <button class="tab" data-tab="assign"><b>3</b><span></span></button>
+        <button class="tab" data-tab="roles"><b>4</b><span></span></button>
+      </nav>
+      <div id="side" class="side"></div>
+      <footer id="footNote" class="foot"></footer>
+    </aside>
+
+    <section class="stage-wrap">
+      <h1 id="printTitle" class="print-title"></h1>
+      <div id="stage" class="stage">
+        <div id="sizer" class="sizer"><div id="board" class="board"></div></div>
+      </div>
+      <div class="zoom">
+        <button id="zoomOut" class="icon" aria-label="Zoom out">−</button>
+        <span id="zoomVal">100%</span>
+        <button id="zoomIn" class="icon" aria-label="Zoom in">+</button>
+        <button id="zoomFit"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/roster.js"></script>
+  <script src="js/seating.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
