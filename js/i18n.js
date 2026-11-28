@@ -26,6 +26,7 @@
     undo: ['Undo', '撤销', 'Buat asal', 'செயல்தவிர்'],
     redo: ['Redo', '重做', 'Buat semula', 'மீண்டும் செய்'],
     fileError: ['This is not a valid Seat Manager file.', '这不是有效的排排坐文件。', 'Ini bukan fail Seat Manager yang sah.', 'இது சரியான Seat Manager கோப்பு அல்ல.'],
+    feedback: ['Suggest a feature', '功能建议', 'Cadangkan ciri baharu', 'அம்சத்தைப் பரிந்துரைக்க'],
     autosaved: ['Changes are saved automatically in this browser.', '改动会自动保存在本浏览器中。', 'Perubahan disimpan secara automatik dalam pelayar ini.', 'மாற்றங்கள் இந்த உலாவியில் தானாகச் சேமிக்கப்படும்.'],
 
     tabLayout: ['Layout', '布局', 'Susun atur', 'அமைப்பு'],

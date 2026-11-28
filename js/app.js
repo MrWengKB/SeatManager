@@ -56,7 +56,13 @@
     });
     $('#zoomOut').title = t('zoomOut'); $('#zoomIn').title = t('zoomIn'); $('#zoomFit').textContent = t('zoomFit');
     $('#zoomVal').textContent = Math.round(ui.zoom * 100) + '%';
-    $('#footNote').textContent = t('autosaved');
+    const foot = $('#footNote');
+    foot.textContent = t('autosaved') + ' · ';
+    const fb = document.createElement('a');
+    fb.href = 'https://mrwengkb.github.io/FeatureReq/?app=SeatManager';
+    fb.target = '_blank'; fb.rel = 'noopener';
+    fb.textContent = t('feedback');
+    foot.append(fb);
   }
 
   /* ---------- helpers ---------- */

@@ -113,6 +113,7 @@ label.radio input, label.check input { margin-top: 3px; }
 .msg.warn { background: #fbf0dc; color: #8a5a12; }
 .msg.info { background: #e9f1fb; color: #2c5d99; }
 .foot { font-size: 11px; color: var(--muted); padding: 6px 16px; border-top: 1px solid var(--line); }
+.foot a { color: var(--muted); white-space: nowrap; }
 
 ul.slist, ul.glist, ul.clist, ul.rlist { list-style: none; margin: 0; padding: 0; }
 .slist li, .glist li, .clist li, .rlist li { display: flex; align-items: center; gap: 6px; padding: 4px 0; flex-wrap: wrap; font-size: 14px; }
